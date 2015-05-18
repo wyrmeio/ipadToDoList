@@ -66,9 +66,11 @@ class AddViewController: UIViewController {
         
         userDefaults.synchronize()
         
-        self.navigationController!.popToRootViewControllerAnimated(true)
+        //self.navigationController!.popToRootViewControllerAnimated(true)
         
+        navigationController!.popToViewController(navigationController!.viewControllers[1] as! UIViewController, animated: true)
 
+        
     }
     /*
     // MARK: - Navigation

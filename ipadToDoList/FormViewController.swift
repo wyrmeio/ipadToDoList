@@ -10,11 +10,9 @@ import UIKit
 
 class FormViewController: UIViewController {
 
-    @IBOutlet weak var gender: UISwitch!
-    
-    @IBOutlet weak var age: UISlider!
-    
+   
     @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var ageSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,14 +29,14 @@ class FormViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func ageChanged(sender: AnyObject, forEvent event: UIEvent) {
+    @IBAction func ageChanged(sender: AnyObject) {
         
-        //ageLabel.text=(age.value as! Int) as! String;
-       /* let s = NSString(format: "%2f", age.value)
-        ageLabel.text=s as String*/
-        
+        //var myIntValue:Int = Int(myFloatValue)
+        var age:Int=Int(ceil(ageSlider.value))
+        var temp:String="I am \(age) years old"
+        ageLabel.text=temp
+        println(age);
     }
-
     /*
     // MARK: - Navigation
 
